@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">E:\Alteryx\Input_Output\sales_2*.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Sales data</AnnotationText>
+          <DefaultAnnotationText>sales_2*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ORDERNUMBER" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="QUANTITYORDERED" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="PRICEEACH" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="ORDERLINENUMBER" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="SALES" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="ORDERDATE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="STATUS" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="QTR_ID" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="MONTH_ID" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="YEAR_ID" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="PRODUCTLINE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="MSRP" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="PRODUCTCODE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="CUSTOMERNAME" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="PHONE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="ADDRESSLINE1" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="ADDRESSLINE2" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="CITY" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="STATE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="POSTALCODE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="COUNTRY" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="TERRITORY" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="CONTACTLASTNAME" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="CONTACTFIRSTNAME" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+            <Field name="DEALSIZE" size="254" source="File: E:\Alteryx\Input_Output\sales_2003.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="162" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ander\AppData\Local\Temp\Engine_8028_c85a74207abfeb45aa02616f13b0e719_\Engine_8028_f4c094e1e8a8f2438c3f1260dc5b7a82~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Sales info</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="162" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">E:\Alteryx\Input_Output\sales.xlsx|||AllSales</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Append</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>sales.xlsx
+Query=AllSales</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="DateTimeNow">
+        <Position x="402" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Language">English</Value>
+          <Value name="OutputFormat">HH:mm:ss</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="DateTimeNow\Supporting_Macros\DTNEngine.yxmc" EngineDll="Macro" EngineDllEntryPoint="DateTimeNow\Supporting_Macros\DTNEngine.yxmc" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="498" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ander\AppData\Local\Temp\Engine_8028_c85a74207abfeb45aa02616f13b0e719_\Engine_8028_63eca294bba4b34a87839835a4110489~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="426" y="18" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Obtener fecha actual</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="90" y="18" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Simple output</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="DTN" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Output+Date</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="0255a168-c05b-49fb-a3d1-4417c25b7796" />
+      <Telemetry>
+        <PreviousWorkflowId value="4f06055e-faa8-4d88-b48a-0c71d8655c4e" />
+        <OriginWorkflowId value="4f06055e-faa8-4d88-b48a-0c71d8655c4e" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

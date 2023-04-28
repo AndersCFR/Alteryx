@@ -1,0 +1,25 @@
+Mediante una aplicación obtener los valores de los clientes con mayores ventas por región.
+
+Mediante una aplicación obtener los valores de los productos con mayores ventas
+
+Utilizando la fuente “Muestra Supertienda” realizar:
+
+Se necesita asignar nuevos valores para  Segmento en los casos de que sea Empresa, Cliente, Pequeña empresa reemplazar con EMP, CLI, y PEMP, respectivamente.(Macro)
+
+Se debe agregar una nueva columna que se llame PORC_PARTICIPACIÓN, dónde se obtenga el porcentaje de participación de ventas a nivel de cliente.
+
+Para generar un informe es necesario lo siguiente:
+
+Los campos a presentar son Id de Cliente, Nombre de Cliente, Ventas, Cantidad y PORC_PARTICIPACIÓN.(Macro)
+
+Se deben resaltar los valores en el campo  Id de Cliente,   con negrilla si sus ventas son mayores a 6000.
+
+Se deben resaltar las filas en las que su porcentaje de participación sea mayor a 50%, con color rosa.
+
+Los valores de la venta deben llevar el carácter de dólares ‘$’ antes de su valor.
+
+Debe tener un título con el nombre ANÁLISIS DE VENTAS POR CLIENTE de color rojo y en negrilla.
+
+Se debe presentar el informe en un archivo PDF llamado “INFORME_VENTAS_CLIENTE”
+
+El flujo debe estar organizado mediante contenedores y comentarios

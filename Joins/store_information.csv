@@ -1,0 +1,10 @@
+id,City,Country,Latitude,Longitude,number_of_employees
+1,Indianapolis,United States,39.67,-86.19,14
+2,Waco,United States,31.549333,-97.1466695,11
+3,Philadelphia,United States,39.9396284,-75.1866396,16
+4,Boston,United States,35.9014983,-81.1381216,16
+5,Schaumburg,United States,42.0130165,-88.099845,20
+6,Santa Ana,United States,33.7518692,-117.8590737,8
+7,Wilmington,United States,39.817642,-75.5101999,12
+8,Bronx,United States,40.864318,-73.7977928,13
+10,Cedar Rapids,United States,41.9799999,-91.66,28

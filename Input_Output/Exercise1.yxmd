@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="FileName">E:\Alteryx\Input_Output\All+5+files\kc_house_data_*.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>|</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>kc_house_data_*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="id" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="date" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="price" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="bedrooms" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="bathrooms" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="sqft_living" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="sqft_lot" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="floors" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="waterfront" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="view" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="condition" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="grade" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="sqft_above" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="sqft_basement" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="yr_built" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="yr_renovated" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="zipcode" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="lat" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="long" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="sqft_living15" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="sqft_lot15" size="254" source="File: E:\Alteryx\Input_Output\All+5+files\kc_house_data_1.csv" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="186" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ander\AppData\Local\Temp\Engine_11216_21b616227c93a24fb6bf91e7b921b843_\Engine_11216_cb8bb9f5a906594d8584d69f6370ed7c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Exercise1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="d216a8e0-2275-4b78-abae-df8bd220b614" />
+      <Telemetry>
+        <PreviousWorkflowId value="5fcd8dec-3b8f-42b7-9bd3-c152bac6b9c3" />
+        <OriginWorkflowId value="5fcd8dec-3b8f-42b7-9bd3-c152bac6b9c3" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

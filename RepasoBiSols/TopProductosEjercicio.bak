@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="8">E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <NoProgress>False</NoProgress>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Muestra-Supertienda.xls
+Query=`Compras$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Id# de la fila" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="Double" />
+            <Field name="Id# del pedido" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Fecha del pedido" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="DateTime" />
+            <Field name="Fecha de envío" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="DateTime" />
+            <Field name="Método de envío" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Id# del cliente" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Nombre del cliente" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Segmento" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Ciudad" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Provincia/Estado/Departamento" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="País/Región" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Región" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Id# del producto" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Categoría" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Subcategoría" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Nombre del producto" size="255" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="V_WString" />
+            <Field name="Ventas" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="Double" />
+            <Field name="Cantidad" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="Double" />
+            <Field name="Descuento" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="Double" />
+            <Field name="Ganancia" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="Double" />
+            <Field name="F21" source="File: E:\Alteryx\RepasoBiSols\Muestra-Supertienda.xls|||`Compras$`" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="114" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Nombre del producto" action="GroupBy" rename="Nombre del producto" />
+            <SummarizeField field="Ventas" action="Sum" rename="Sum_Ventas" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nombre del producto" size="255" source="Summarize: GroupBy - Nombre del producto" type="V_WString" />
+            <Field name="Sum_Ventas" source="Summarize: Sum - Ventas" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="150" y="6" width="480" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Mediante una aplicación obtener los valores de los productos con mayores ventas</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="198" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Sum_Ventas" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Sum_Ventas - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nombre del producto" size="255" source="Summarize: GroupBy - Nombre del producto" type="V_WString" />
+            <Field name="Sum_Ventas" source="Summarize: Sum - Ventas" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="282" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Nombre del producto</UpdateField_Name>
+          <CreateField_Name>Indice</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Indice]+1</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Indice]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nombre del producto" size="255" source="Summarize: GroupBy - Nombre del producto" type="V_WString" />
+            <Field name="Sum_Ventas" source="Summarize: Sum - Ventas" type="Double" />
+            <Field name="Indice" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="366" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&lt;=</Operator>
+            <Field>Indice</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-04-27 09:45:49</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>10</Operand>
+              <StartDate>2023-04-27 09:45:49</StartDate>
+              <EndDate>2023-04-27 09:45:49</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Indice] &lt;= 10</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Nombre del producto" size="255" source="Summarize: GroupBy - Nombre del producto" type="V_WString" />
+            <Field name="Sum_Ventas" source="Summarize: Sum - Ventas" type="Double" />
+            <Field name="Indice" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Nombre del producto" size="255" source="Summarize: GroupBy - Nombre del producto" type="V_WString" />
+            <Field name="Sum_Ventas" source="Summarize: Sum - Ventas" type="Double" />
+            <Field name="Indice" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="486" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">E:\Alteryx\RepasoBiSols\TopProductosMasVendidos.xlsx|||Productos</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TopProductosMasVendidos.xlsx
+Query=Productos</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="378" y="150" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="366" y="78" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Text Box (11)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Action" />
+      <Destination ToolID="7" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="11" Connection="Question" />
+      <Destination ToolID="10" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Text Box (11)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>TopProductosEjercicio</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="94c9242d-154e-42e8-a25a-99da1301f860" />
+      <Telemetry>
+        <PreviousWorkflowId value="9abbf34d-3359-45ce-9729-d625e5fc0c0c" />
+        <OriginWorkflowId value="9abbf34d-3359-45ce-9729-d625e5fc0c0c" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="10" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>7/Simple/Field</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (9)</Name>
+          <ToolId value="9" />
+          <Questions>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Ingrese el número de top deseado</Description>
+              <Name>Text Box (11)</Name>
+              <ToolId value="11" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="8" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
