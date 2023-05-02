@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="30" y="54" />
+        <Position x="54" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -27,9 +27,6 @@
           <DefaultAnnotationText>sales_stores.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Store" size="254" source="File: E:\Alteryx\DataPreparation\sales_stores.csv" type="V_String" />
@@ -45,7 +42,7 @@
     </Node>
     <Node ToolID="2">
       <GuiSettings>
-        <Position x="126" y="54" />
+        <Position x="150" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -68,15 +65,12 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro="Cleanse.yxmc" />
     </Node>
     <Node ToolID="3">
       <GuiSettings>
-        <Position x="198" y="54" />
+        <Position x="222" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -99,15 +93,12 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings Macro="Cleanse.yxmc" />
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="738" y="54" />
+        <Position x="762" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -135,7 +126,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="270" y="54" />
+        <Position x="294" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -157,7 +148,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
-        <Position x="342" y="54" />
+        <Position x="366" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -178,7 +169,7 @@ dd/MM/yyyy</DefaultAnnotationText>
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="414" y="54" />
+        <Position x="438" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -199,7 +190,7 @@ Weekly_Sales = IF IsEmpty([Week...</DefaultAnnotationText>
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
-        <Position x="486" y="54" />
+        <Position x="510" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -230,7 +221,7 @@ Weekly_Sales = IF IsEmpty([Week...</DefaultAnnotationText>
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="558" y="54" />
+        <Position x="582" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -253,7 +244,7 @@ Weekly_Sales = IF IsEmpty([Week...</DefaultAnnotationText>
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="630" y="54" />
+        <Position x="654" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -273,7 +264,7 @@ Weekly_Sales = IF IsEmpty([Week...</DefaultAnnotationText>
     </Node>
     <Node ToolID="12">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="42" y="306" />
+        <Position x="66" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -295,7 +286,7 @@ Date - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="654" y="306" />
+        <Position x="678" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -323,7 +314,7 @@ Date - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="42" y="18" width="348" height="24" />
+        <Position x="66" y="54" width="348" height="24" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -343,7 +334,7 @@ Date - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="42" y="174" width="348" height="24" />
+        <Position x="66" y="210" width="348" height="24" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -363,7 +354,7 @@ Date - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="138" y="306" />
+        <Position x="162" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -386,7 +377,7 @@ Date - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="294" y="258" />
+        <Position x="318" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -398,9 +389,7 @@ Date - Ascending</DefaultAnnotationText>
           <OtherRows>Empty</OtherRows>
           <NumRows value="1" />
           <Expression>[Row-1:Running_Total]+[Weekly_Sales]</Expression>
-          <GroupByFields>
-            <Field field="Store" />
-          </GroupByFields>
+          <GroupByFields />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -412,7 +401,7 @@ Date - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="294" y="402" />
+        <Position x="318" y="438" />
       </GuiSettings>
       <Properties>
         <Configuration>
